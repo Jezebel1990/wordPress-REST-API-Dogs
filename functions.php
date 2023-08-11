@@ -2,6 +2,8 @@
 
 remove_action('rest_api_init', 'create_initial_rest_routes', 99);
 
+$dirbase = get_template_directory(); //puxa diretório do templete
+require_once $dirbase . '/endpoints/user_post.php'; // concatenar com . 
 
 function change_api() {
     return 'json';
