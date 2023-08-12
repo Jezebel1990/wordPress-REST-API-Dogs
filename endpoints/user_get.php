@@ -6,8 +6,8 @@ function api_user_get($request) {
 
   if($user_id === 0) {
     $response = new WP_Error('error', 'Usuário não possui permissão', ['status' => 401]);
-    return rest_ensure_response($response)
-  }
+    return rest_ensure_response($response);
+  };
 
   $response = [
     'id' => $user_id,
